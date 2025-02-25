@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Coloque aonde vc nasceu <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="Nacionalidade()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function Nacionalidade() {
+            var nac = document.querySelector('input#nac').value
+            var R = document.querySelector('div#res')
+            R.innerHTML = '';
+            R.innerHTML += 'Vc é:'
+            if (nac === 'Brasil') {
+                R.innerHTML += `Brasileiro`
+            } else {
+                R.innerHTML += `Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
