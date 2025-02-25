@@ -1,7 +1,5 @@
 # Meus estudos de JS
 
-# Meu Portifólio/Meu Site
-
 🔖 Sobre:
 
 Aqui está **Projetos desafiadores/estudos** realizados e finalizados por mim.
