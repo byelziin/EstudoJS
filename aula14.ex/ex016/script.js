@@ -1,4 +1,3 @@
-alert('Olá!')
 
 function Contar() {
     var i = document.querySelector('input#num').value
@@ -8,20 +7,27 @@ function Contar() {
     
     R.innerHTML = ''; 
     
-    if (p <= 0) {
-        alert('O passo deve ser maior que 0!')
+
+    
+    if (i === '' || f === '' || p === '') {
+        alert('[ERRO], Falta prencher uma coluna')
         return;
+    } else {
+        if (Number(i) < Number(f)) {
+            for (var j = Number(i); j <= Number(f); j += Number(p)) {
+                R.innerHTML += j + ' 👉 ';
+            }
+        } else {
+            for (var j = Number(i); j >= Number(f); j -= Number(p)) {
+                R.innerHTML += j + ' 👉 ';
+            }
+        }
     }
 
-    if (i > f) {
-        alert("O valor de início deve ser menor ou igual ao valor de fim.");
-        return;
-    }
-
-    for (var j = Number(i); j <= Number(f); j += Number(p)) {
-        R.innerHTML += j + '👉' ;
-        
-    }
 
     R.innerHTML += ' 🏁';
 }
+
+    
+
+    
